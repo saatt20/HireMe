@@ -1,0 +1,86 @@
+.card {
+    border-radius: 16px;
+    border: none;
+}
+
+.card-judul {
+    background-color: #ffffff;
+}
+
+.card-tabel {
+    background-color: #ffffff;
+    padding: 1rem 1.5rem;
+}
+
+.tambah-mitra-btn {
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-heading {
+    border-bottom: 2px solid #000;
+    font-weight: bold;
+}
+
+.table td, .table th {
+    vertical-align: middle;
+    padding: 0.75rem;
+    border-bottom: 1px solid #ccc;
+}
+
+.search-form input[type="text"] {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 6px 12px;
+    min-width: 220px;
+}
+
+.btn-danger {
+    background-color: #880C16;
+    border: none;
+}
+
+.btn-danger:hover {
+    background-color: #6c0a13;
+}
+
+.btn-custom-red {
+    background-color: #C71527;
+    color: #fff;
+    border: none;
+}
+
+.btn-custom-red:hover {
+    background-color: #a8121f;
+    color: #fff;
+}
+
+.bg-red-custom {
+    background-color: #C71527; /* Sesuaikan warna merah sesuai desain kamu */
+}
+
+.relative-container {
+    position: relative;
+    overflow: hidden;
+
+}
+
+.absolute-image {
+    position: absolute;
+    top: 20;
+    left: 100px;
+    width: 100px;
+    height: 100%;
+}
+
+.back-icon {
+    color: black;
+    font-size: 22px;
+    text-decoration: none;
+    margin-bottom: 5px;
+}

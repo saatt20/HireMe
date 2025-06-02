@@ -1,0 +1,129 @@
+/* Card Utama */
+.container .card-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Card Section */
+.bg-white {
+    background-color: white;
+}
+
+.rounded-4 {
+    border-radius: 1rem !important;
+}
+
+.shadow-sm {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.fw-semibold {
+    font-weight: 600;
+}
+
+/* Teks dan Label */
+.form-label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.form-control, .form-select {
+    font-size: 0.9rem;
+    border-radius: 0.5rem;
+}
+
+/* Tombol */
+.btn-danger.btn-sm {
+    padding: 6px 16px;
+    font-size: 0.85rem;
+    border-radius: 8px;
+}
+
+.btn-secondary.btn-sm {
+    padding: 6px 16px;
+    font-size: 0.85rem;
+    border-radius: 8px;
+}
+
+/* Layout */
+#profileEditForm input, #profileEditForm select {
+    margin-bottom: 12px;
+}
+
+#profileEditForm .row {
+    margin-bottom: 10px;
+}
+
+.profile-header-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #a8121f;
+}
+
+.border-bottom {
+    border-bottom: 2px solid #e0e0e0; /* Garis tipis berwarna abu-abu */
+    margin-bottom: 20px;
+}
+
+    .switch {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 24px;
+    margin-bottom: 0;
+}
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+input:checked + .slider {
+    background-color: #C71527; /* Bootstrap danger color */
+}
+input:checked + .slider:before {
+    transform: translateX(24px);
+}
+
+.bg-red-custom {
+    background-color: #C71527; /* Sesuaikan warna merah sesuai desain kamu */
+}
+
+.relative-container {
+    position: relative;
+    overflow: hidden;
+
+}
+
+.absolute-image {
+    position: absolute;
+    top: 20;
+    left: 100px;
+    width: 100px;
+    height: 100%;
+}

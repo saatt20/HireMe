@@ -1,0 +1,328 @@
+.cv-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.cv-header-card {
+    background-color: #C5161D;
+    color: white;
+    padding: 1.5rem 2rem;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+}
+
+.bg-red-custom {
+    background-color: #C71527; /* Sesuaikan warna merah sesuai desain kamu */
+}
+
+.relative-container {
+    position: relative;
+    overflow: hidden;
+
+}
+
+.absolute-image {
+    position: absolute;
+    top: 20;
+    left: 100px;
+    width: 100px;
+    height: 100%;
+}
+
+
+.cv-form-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.cv-identity {
+    margin-bottom: 30px;
+}
+
+.cv-identity .nama-user {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.cv-identity .kontak-user,
+.cv-identity .lokasi-user {
+    font-size: 14px;
+    color: #444;
+}
+
+.cv-section {
+    margin-bottom: 30px;
+}
+
+.cv-section h4 {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.section-desc {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.form-control {
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.btn-simpan {
+    background-color: #d42228;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 30px;
+    font-weight: bold;
+    border: none;
+    transition: background-color 0.2s;
+}
+
+.btn-simpan:hover {
+    background-color: #b71c1c;
+}
+.cv-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.cv-header-card {
+    background-color: #d42228;
+    color: #fff;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 20px 30px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.cv-form-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.cv-identity {
+    margin-bottom: 30px;
+}
+
+.cv-identity .nama-user {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.cv-identity .kontak-user,
+.cv-identity .lokasi-user {
+    font-size: 14px;
+    color: #444;
+}
+
+.cv-section {
+    margin-bottom: 30px;
+}
+
+.cv-section h4 {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.section-desc {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.form-control {
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.btn-simpan {
+    background-color: #d42228;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 30px;
+    font-weight: bold;
+    border: none;
+    transition: background-color 0.2s;
+}
+
+.btn-simpan:hover {
+    background-color: #b71c1c;
+}
+
+.back-icon {
+    color: black;
+    font-size: 22px;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.modal-header {
+    background-color: #C5161D; /* Match the CV header card color */
+    color: white;
+    border-radius: 8px 8px 0 0;
+    padding: 12px 20px;
+}
+
+.modal-title {
+    font-weight: bold;
+    font-family: Arial;
+}
+
+.modal-content {
+    border-radius: 16px; /* Match the CV card border radius */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    font-family: Arial;
+}
+
+.modal-body {
+    padding: 2rem; /* Match CV card padding */
+}
+
+/* CV Example content styles */
+.cv-example {
+    font-family: Arial, sans-serif;
+    color: #333;
+    font-size: 14px; /* Reduce overall font size */
+}
+
+.cv-example-header {
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.cv-example-header h3 {
+    color: #000;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 1.6rem; /* Slightly smaller */
+    font-family: Arial;
+}
+
+.cv-example-header p {
+    margin-bottom: 5px;
+}
+
+.cv-example-header .kontak-user {
+    color: gray;
+    margin-bottom: 0.5rem;
+    font-family: Arial;
+}
+
+.cv-example-header .lokasi-user {
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-family: Arial;
+}
+
+.cv-example-section {
+    margin-top: 2rem;
+    padding-top: 0;
+    font-family: Arial;
+}
+
+.cv-example-section h4 {
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    border-bottom: 3px solid #333; /* Match the default CV section header style */
+    padding-bottom: 0.5rem;
+    font-family: Arial;
+    font-size: 16px; /* Smaller heading size */
+}
+
+.cv-example-item {
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.8rem;
+}
+
+/* Fix the layout issue with location and date */
+.cv-entry {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+
+}
+
+.cv-entry-left {
+    width: 70%;
+}
+
+.cv-entry-right {
+    width: 30%;
+    text-align: right;
+    font-size: 0.9rem;
+}
+
+.cv-example-item strong {
+    color: #000;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.cv-example-item p {
+    margin-top: 0.5rem;
+    color: #000000;
+    line-height: 1.4;
+    padding-left: 0.5rem;
+    font-size: 13px;
+}
+
+/* Additional styling for list items */
+.cv-description-list {
+    margin-top: 0.5rem;
+    padding-left: 1.2rem;
+    list-style-type: disc;
+    color: #000000;
+    font-family: Arial;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.cv-description-list li {
+    margin-bottom: 3px;
+}
+
+/* Button example CV style */
+.btn-example {
+    background-color: white;
+    color: #C5161D;
+    border: 1px solid white;
+    border-radius: 8px;
+    padding: 8px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s;
+}
+
+.btn-example:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.modal-footer {
+    border-top: 1px solid #eee;
+    padding: 15px 20px;
+}
+
+.modal-footer .btn-secondary {
+    background-color: #C5161D;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 8px;
+}
+
+.modal-footer .btn-secondary:hover {
+    background-color: #a31318;
+}

@@ -1,0 +1,91 @@
+/* mitra-profil.css */
+
+/* Atur ukuran card dan spasi */
+.card {
+    border: none;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 1.25rem;
+}
+
+/* Judul section */
+.card h4,
+.card h5 {
+    color: #333;
+}
+
+/* Gaya label dan teks */
+label.form-label {
+    font-weight: 600;
+    color: #555;
+}
+
+p {
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+/* Input dan textarea */
+input.form-control,
+textarea.form-control {
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.95rem;
+}
+
+/* Tombol */
+.btn-danger.btn-sm,
+.btn-secondary.btn-sm {
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 0.5rem;
+}
+
+.btn-link {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* Logo */
+#previewLogo {
+    border: 2px solid #ddd;
+}
+
+/* Tombol edit di gambar logo */
+#logoInput + label {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 6px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-red-custom {
+    background-color: #C71527; /* Sesuaikan warna merah sesuai desain kamu */
+}
+
+.relative-container {
+    position: relative;
+    overflow: hidden;
+
+}
+
+.absolute-image {
+    position: absolute;
+    top: 20;
+    left: 100px;
+    width: 100px;
+    height: 100%;
+}
+
+
+/* Responsive tweak */
+@media (max-width: 768px) {
+    .card .row > div {
+        margin-bottom: 1rem;
+    }
+}

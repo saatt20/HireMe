@@ -1,0 +1,42 @@
+.form-columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.left-column {
+    flex: 1 1 60%;
+    min-width: 300px;
+}
+
+.right-column {
+    flex: 1 1 35%;
+    min-width: 280px;
+}
+
+.card {
+    border-radius: 12px;
+    border: none;
+}
+.card h5 {
+    color: #880C16;
+}
+
+.btn-danger {
+    background-color: #880C16;
+    border: none;
+}
+.btn-danger:hover {
+    background-color: #6c0a13;
+}
+
+.back-icon {
+    color: black;
+    font-size: 22px;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.back-icon:hover {
+    color: #d0021b;
+}

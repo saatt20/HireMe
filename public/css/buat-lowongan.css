@@ -1,0 +1,140 @@
+.buat-lowongan-wrapper {
+    padding: 30px 0;
+}
+
+.card-title-section {
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.form-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.form-columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.left-column {
+    flex: 1.4;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.right-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card-sub {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #fff;
+}
+
+.section-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #888;
+}
+
+.card-sub label {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.card-sub input,
+.card-sub textarea,
+.card-sub select {
+    width: 100%;
+    border: 1px solid #333;
+    border-radius: 4px;
+    padding: 8px 10px;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.btn-wrapper {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.btn-submit {
+    background-color: #d0021b;
+    color: white;
+    border: none;
+    padding: 10px 200px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background-color: #a80015;
+}
+
+.card-title-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.back-icon {
+    color: black;
+    font-size: 22px;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.back-icon:hover {
+    color: #d0021b;
+}
+
+.bg-red-custom {
+    background-color: #C71527; /* Sesuaikan warna merah sesuai desain kamu */
+}
+
+.relative-container {
+    position: relative;
+    overflow: hidden;
+
+}
+
+.absolute-image {
+    position: absolute;
+    top: 20;
+    left: 100px;
+    width: 100px;
+    height: 100%;
+}
+
+.back-icon {
+    color: black;
+    font-size: 22px;
+    text-decoration: none;
+    margin-bottom: 30px;
+}

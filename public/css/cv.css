@@ -1,0 +1,207 @@
+/* CSS untuk CV */
+.cv-header-card {
+    background-color: #C5161D;
+    color: white;
+    padding: 1.5rem 2rem;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+}
+
+.cv-preview {
+    padding: 2rem;
+}
+
+.cv-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    position: relative; /* Penting untuk positioning watermark */
+    font-family: Arial;
+}
+
+.cv-name {
+    font-size: 1.8rem;
+    font-weight: bold;
+    font-family: Arial;
+}
+
+.cv-contact {
+    color: gray;
+    margin-bottom: 0.5rem;
+    font-family: Arial;
+}
+
+.cv-location {
+    color: #333;
+    margin-bottom: 1.5rem;
+    font-family: Arial;
+}
+
+.cv-section {
+    margin-top: 0.5rem;
+    padding-top: 0;
+    border-top: none;
+    font-family: Arial;
+}
+
+.cv-section h4 {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    border-bottom: 3px solid #333; /* garis tebal di bawah judul */
+    padding-bottom: 0.5rem;
+    font-family: Arial;
+}
+
+
+.cv-section:first-of-type {
+    border-top: none;
+    padding-top: 0;
+    margin-top: 0;
+    font-family: Arial;
+}
+
+.cv-section ul {
+    padding-left: 0rem;
+    list-style-type: disc;
+    font-family: Arial;
+}
+
+.cv-entry {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.cv-entry-left {
+    width: 70%;
+}
+
+.cv-entry-right {
+    width: 30%;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.cv-entry-right div {
+    font-weight: bold;
+}
+
+.cv-description-list {
+    margin-top: 0.5rem;
+    list-style-type: disc;
+    list-style-position: outside;
+    color: #000000;
+    font-family: Arial;
+}
+
+.cv-description-list li {
+    list-style-type: disc; /* Tambahkan bullet di <li> */
+    margin-left: 1.2rem;   /* Hanya indent pada bullet */
+}
+
+
+/* Watermark styling */
+.watermark-footer {
+    display: none;
+}
+
+.bg-red-custom {
+    background-color: #C71527; /* Sesuaikan warna merah sesuai desain kamu */
+}
+
+.relative-container {
+    position: relative;
+    overflow: hidden;
+
+}
+
+.absolute-image {
+    position: absolute;
+    top: 20;
+    left: 100px;
+    width: 100px;
+    height: 100%;
+}
+
+.empty-section {
+    display: block;
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    .cv-card, .cv-card * {
+        visibility: visible;
+    }
+
+    .cv-card {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        box-shadow: none !important;
+        padding: 3rem;
+        border: none;
+        margin: 0;
+    }
+
+    .cv-section {
+        margin-top: 1rem; /* Lebih rapat ke atas */
+    }
+
+    .cv-name {
+        font-size: 17px;
+        font-weight: bold;
+    }
+
+    .cv-section h4 {
+        font-size: 15px;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        border-bottom: 3px solid #333;
+        padding-bottom: 0.3rem;
+    }
+
+    .cv-section,
+    .cv-contact,
+    .cv-location,
+    .cv-entry-left,
+    .cv-entry-right {
+        font-size: 12px;
+    }
+
+    .cv-card .btn,
+    .cv-card .text-end .btn-warning,
+    .cv-card .text-end .btn-primary {
+        display: none !important;
+    }
+
+    nav,
+    .navbar,
+    header,
+    footer,
+    .cv-header-card,
+    .alert,
+    .sidebar {
+        display: none !important;
+    }
+
+    /* Watermark footer styling untuk print */
+    .watermark-footer {
+        display: block;
+        visibility: visible;
+        position: fixed;
+        bottom: 10px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 10px;
+        color: rgba(100, 100, 100, 0.6);
+        font-style: italic;
+        z-index: 1000;
+    }
+}

@@ -1,0 +1,47 @@
+.search-form .form-control,
+.search-form .form-select {
+    border-radius: 1rem;
+    padding: 0.6rem 1rem;
+    font-size: 0.95rem;
+}
+
+.search-form .btn-danger {
+    background-color: #C71527;
+    border: none;
+    border-radius: 1rem;
+    padding: 0.65rem 1.25rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.search-form .btn-danger:hover {
+    background-color: #C71527;
+}
+
+.bg-red-custom {
+    background-color: #C71527;
+}
+
+.relative-container {
+    position: relative;
+    overflow: hidden;
+
+}
+
+.absolute-image {
+    position: absolute;
+    top: 20;
+    left: 100px;
+    width: 100px;
+    height: 100%;
+}
+
+.search-wrapper {
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+

@@ -1,0 +1,102 @@
+/* lowongan-detail.css */
+
+/* =============================
+   General Card Styling
+   ============================= */
+   .card-detail {
+    border-radius: 16px;
+    border: 1px solid #e0e0e0;
+    background-color: #fff;
+    padding: 24px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* =============================
+   Skill Badge
+   ============================= */
+.skill-badge {
+    background-color: #f2f2f2;
+    padding: 5px 12px;
+    border-radius: 16px;
+    font-size: 0.85rem;
+    border: 1px solid #ccc;
+    color: #333;
+}
+
+/* =============================
+   Badge Styling (Status)
+   ============================= */
+.badge {
+    font-size: 0.85rem;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+/* =============================
+   Section Titles
+   ============================= */
+.card h5 {
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+/* =============================
+   Right Sidebar Mitra Card
+   ============================= */
+.card .fw-semibold {
+    font-weight: 600;
+}
+
+.card .fw-bold {
+    font-weight: 700;
+}
+
+.card p {
+    margin-bottom: 0.75rem;
+    color: #333;
+    line-height: 1.5;
+}
+
+.card-detail .border-md-end {
+    border-right: 1px solid #e0e0e0;
+}
+
+.card-detail .col-md-4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-detail .d-grid {
+    margin-top: auto;
+}
+
+
+/* =============================
+   Responsive Adjustments
+   ============================= */
+@media (max-width: 768px) {
+    .card-detail {
+        padding: 16px;
+    }
+
+    .skill-badge {
+        font-size: 0.75rem;
+        padding: 4px 10px;
+    }
+
+    .badge {
+        font-size: 0.75rem;
+        padding: 4px 10px;
+    }
+
+    .card h5 {
+        font-size: 1.1rem;
+    }
+
+
+}
+
+

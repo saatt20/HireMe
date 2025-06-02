@@ -1,0 +1,121 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    line-height: 1.6;
+    margin: 0;
+    background-color: white;
+}
+
+h2 {
+    color: #333;
+    margin-top: 0;
+}
+
+/* Badge styles */
+.badge {
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.bg-success {
+    background-color: #28a745;
+    color: white;
+}
+
+.bg-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+.bg-warning {
+    background-color: #ffc107;
+    color: black;
+}
+
+/* Printable content */
+.print-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 20px 0;
+}
+
+/* Tombol cetak - hanya ditampilkan di layar */
+.no-print {
+    margin: 15px 0;
+    text-align: right;
+}
+
+.no-print button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.no-print button:hover {
+    background-color: #0056b3;
+}
+
+.no-print button:last-child {
+    background-color: #6c757d;
+}
+
+.no-print button:last-child:hover {
+    background-color: #5a6268;
+}
+
+/* PRINT STYLES */
+@media print {
+    /* Sembunyikan semua elemen di luar print-content */
+    body * {
+        visibility: hidden;
+        display: none !important;
+    }
+
+    /* Tampilkan hanya konten yang dicetak */
+    .print-content, .print-content * {
+        visibility: visible;
+        display: block !important;
+    }
+
+    .print-content {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        box-shadow: none !important;
+        padding: 0;
+        margin: 0;
+        border: none;
+    }
+
+    @page {
+        margin: 1.5cm;
+        size: portrait;
+    }
+
+    body {
+        padding: 0;
+        margin: 0;
+        font-size: 12pt;
+        background-color: white;
+    }
+
+    h2 {
+        font-size: 14pt;
+        margin-bottom: 10px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}

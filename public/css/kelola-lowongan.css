@@ -1,0 +1,105 @@
+/* Card Styling */
+.card {
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Card Header */
+.card-header {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Card Body */
+.card-body {
+    padding: 20px;
+}
+
+/* Tabel Styling */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Mengatur teks untuk Nama Posisi agar tidak rata tengah */
+.table th:nth-child(1), .table td:nth-child(1) {
+    text-align: left;
+}
+
+/* Kolom Aksi tombol tetap rata tengah */
+.table td:last-child {
+    vertical-align: middle;
+    text-align: center;
+}
+
+/* Supaya tombol tidak menempel dan tetap rapi */
+.table td:last-child .btn {
+    margin: 2px 0;
+}
+
+/* Menghapus garis vertikal pada tabel */
+.table th, .table td {
+    border-left: none;
+    border-right: none;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+}
+
+/* Mempertahankan garis horizontal */
+.table thead tr {
+    border-bottom: 2px solid #333;  /* Garis bold di bawah header */
+}
+
+.table tbody tr {
+    border-bottom: 1px solid #b8b8b8ee;  /* Garis tipis antara baris data */
+}
+
+/* Optional: Mengatur garis header lebih tebal */
+.table th {
+    border-top: none;
+    font-weight: bold;
+}
+
+/* Button Styling */
+.btn-color {
+    background-color: #6f0a12;
+    border-color: #6f0a12;
+}
+
+.btn-sm {
+    padding: 5px 10px;
+}
+
+/* Alert Styling */
+.alert {
+    margin-top: 15px;
+}
+
+/* Ensure proper spacing and no overflow */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.bg-red-custom {
+    background-color: #C71527; /* Sesuaikan warna merah sesuai desain kamu */
+}
+
+.relative-container {
+    position: relative;
+    overflow: hidden;
+
+}
+
+.absolute-image {
+    position: absolute;
+    top: 20;
+    left: 100px;
+    width: 100px;
+    height: 100%;
+}
