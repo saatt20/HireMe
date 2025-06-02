@@ -467,7 +467,7 @@
       </div>
       <div class="col-md-4 d-flex">
         <div class="feature-card w-100">
-          <h5>CV Profesional</h5>
+          <h5>CV Profesionals</h5>
           <p>Bangun CV yang terstruktur dan menarik langsung di platform HireMe. Tampilkan pengalaman, pendidikan, dan keahlianmu dengan format profesional yang memudahkan perusahaan untuk mengenal potensimu lebih dalam.</p>
         </div>
       </div>
