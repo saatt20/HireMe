@@ -70,23 +70,23 @@
                     </div>
 
                    <!-- Card Gaji -->
-                    <!-- Card Gaji -->
                     <div class="card-sub">
-                        <h5 class="section-title">Gaji THP</h5>
+                        <h5 class="section-title">Gaji THP <span class="text-muted"></span></h5>
                         <div class="row">
                             <div class="col-md-6">
                                 <label for="gaji_min">Gaji Minimum (Juta):</label>
                                 <div class="input-group">
-                                    <input type="text" name="gaji_min" id="gaji_min" required placeholder="Contoh: 5 " class="form-control">
+                                    <input type="text" name="gaji_min" id="gaji_min" placeholder="Contoh: 5 " class="form-control">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <label for="gaji_max">Gaji Maksimum (Juta):</label>
                                 <div class="input-group">
-                                    <input type="text" name="gaji_max" id="gaji_max" required placeholder="Contoh: 8" class="form-control">
+                                    <input type="text" name="gaji_max" id="gaji_max" placeholder="Contoh: 8" class="form-control">
                                 </div>
                             </div>
                         </div>
+                        <small class="text-muted">Kosongkan jika tidak ingin menampilkan informasi gaji</small>
                     </div>
 
                     <!-- Card Waktu -->

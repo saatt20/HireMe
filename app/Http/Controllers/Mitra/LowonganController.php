@@ -45,8 +45,8 @@ class LowonganController extends Controller
         ]);
 
         // Format gaji jika ada
-        $gaji_min = $request->gaji_min ? $request->gaji_min . ' Juta' : null;
-        $gaji_max = $request->gaji_max ? $request->gaji_max . ' Juta' : null;
+        $gaji_min = (!empty($request->gaji_min) && trim($request->gaji_min) !== '') ? trim($request->gaji_min) . ' Juta' : null;
+        $gaji_max = (!empty($request->gaji_max) && trim($request->gaji_max) !== '') ? trim($request->gaji_max) . ' Juta' : null;
 
         // Simpan data ke database
         $lowongan = new Lowongan();
@@ -101,8 +101,8 @@ class LowonganController extends Controller
         ]);
 
         // Format gaji jika ada
-        $gaji_min = $request->gaji_min ? $request->gaji_min . ' Juta' : null;
-        $gaji_max = $request->gaji_max ? $request->gaji_max . ' Juta' : null;
+        $gaji_min = (!empty($request->gaji_min) && trim($request->gaji_min) !== '') ? trim($request->gaji_min) . ' Juta' : null;
+        $gaji_max = (!empty($request->gaji_max) && trim($request->gaji_max) !== '') ? trim($request->gaji_max) . ' Juta' : null;
 
         // Cari lowongan berdasarkan ID
         $lowongan = Lowongan::where('id', $id)->where('user_id', Auth::id())->firstOrFail();

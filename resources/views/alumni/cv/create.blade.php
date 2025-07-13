@@ -88,7 +88,7 @@
                         </div>
                         <textarea name="riwayat_pendidikan[{{ $i }}][info_tambahan]" class="form-control" rows="2" placeholder="* Contoh: Mendapat Beasiswa Prestasi Awardee dengan minimum IPK 3,75">{{ $riwayat_pendidikan['info_tambahan'] ?? '' }}</textarea>
 
-                       <button type="button" class="btn btn-danger btn-remove-kerja mt-2">
+                       <button type="button" class="btn btn-danger btn-remove-pendidikan mt-2">
                             <i class="fas fa-trash-alt"></i>
                         </button>
                     </div>
@@ -135,7 +135,7 @@
                     </div>
                     @endforeach
                 </div>
-                <button type="button" id="btn-add-pendidikan" class="btn btn-outline-danger mt-2">
+                <button type="button" id="btn-add-kerja" class="btn btn-outline-danger mt-2">
                     Tambah Pengalaman Kerja
                 </button>
             </div>
@@ -177,7 +177,7 @@
                     </div>
                     @endforeach
                 </div>
-                <button type="button" id="btn-add-pendidikan" class="btn btn-outline-danger mt-2">
+                <button type="button" id="btn-add-organisasi" class="btn btn-outline-danger mt-2">
                     Tambah Pengalaman Organisasi
                 </button>
             </div>
@@ -222,7 +222,7 @@
                     </div>
                     @endforeach
                 </div>
-                <button type="button" id="btn-add-pendidikan" class="btn btn-outline-danger mt-2">
+                <button type="button" id="btn-add-penghargaan" class="btn btn-outline-danger mt-2">
                     Tambah Penghargaan
                 </button>
             </div>
@@ -360,9 +360,15 @@
 
     // Utility untuk hapus item
     document.body.addEventListener('click', function(e) {
-        if (e.target.matches('.btn-remove-pendidikan, .btn-remove-kerja, .btn-remove-organisasi, .btn-remove-penghargaan')) {
-            const item = e.target.closest('div.mb-3.border.rounded.p-3');
-            if (item) item.remove();
+        // Cek apakah yang diklik adalah button remove atau icon di dalamnya
+        if (e.target.matches('.btn-remove-pendidikan, .btn-remove-kerja, .btn-remove-organisasi, .btn-remove-penghargaan') ||
+            e.target.closest('.btn-remove-pendidikan, .btn-remove-kerja, .btn-remove-organisasi, .btn-remove-penghargaan')) {
+
+            // Cari parent container yang tepat
+            const item = e.target.closest('.pendidikan-item, .kerja-item, .organisasi-item, .penghargaan-item');
+            if (item) {
+                item.remove();
+            }
         }
     });
 
@@ -372,6 +378,8 @@
             <div class="col-md-4">
                 <select name="riwayat_pendidikan[__INDEX__][tingkat]" class="form-control" required>
                     <option value="" disabled selected>Pilih Tingkat Pendidikan</option>
+                    <option value="SMA">SMA</option>
+                    <option value="SMK">SMK</option>
                     <option value="Diploma (D1-D4)">Diploma (D1-D4)</option>
                     <option value="Sarjana (S1)">Sarjana (S1)</option>
                     <option value="Magister (S2)">Magister (S2)</option>

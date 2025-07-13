@@ -40,9 +40,9 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Judul</th>
-                            <th>Deskripsi</th>
-                            <th>Mitra</th>
+                            <th>Nama Posisi</th>
+                            <th>Deskripsi Pekerjaan</th>
+                            <th>Perusahaan</th>
                             <th>Link Pendaftaran</th>
                             <th>Aksi</th>
                         </tr>

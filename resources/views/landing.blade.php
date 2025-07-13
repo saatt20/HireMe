@@ -406,9 +406,6 @@
           <li class="nav-item">
             <a class="nav-link active" href="#">Beranda</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Tentang Kami</a>
-          </li>
         </ul>
         <div class="d-flex gap-2">
           <a href="{{ route('login') }}" class="btn btn-outline-hireme btn-login">Job Seeker Sign In</a>
@@ -467,7 +464,7 @@
       </div>
       <div class="col-md-4 d-flex">
         <div class="feature-card w-100">
-          <h5>CV Profesionals</h5>
+          <h5>CV Profesional</h5>
           <p>Bangun CV yang terstruktur dan menarik langsung di platform HireMe. Tampilkan pengalaman, pendidikan, dan keahlianmu dengan format profesional yang memudahkan perusahaan untuk mengenal potensimu lebih dalam.</p>
         </div>
       </div>
@@ -559,6 +556,9 @@
                     <img src="{{ asset('images/finnet.png') }}" alt="Mitra 4" class="img-fluid" />
                 </div>
                 <div class="logo-item">
+                    <img src="{{ asset('images/logo-autokirim.png') }}" alt="Mitra 10" class="img-fluid" />
+                </div>
+                <div class="logo-item">
                     <img src="{{ asset('images/agroteknik.jpg') }}" alt="Mitra 5" class="img-fluid" />
                 </div>
                 <div class="logo-item">
@@ -588,6 +588,9 @@
                 </div>
                 <div class="logo-item">
                     <img src="{{ asset('images/finnet.png') }}" alt="Mitra 4" class="img-fluid" />
+                </div>
+                <div class="logo-item">
+                    <img src="{{ asset('images/logo-autokirim.png') }}" alt="Mitra 10" class="img-fluid" />
                 </div>
                 <div class="logo-item">
                     <img src="{{ asset('images/agroteknik.jpg') }}" alt="Mitra 5" class="img-fluid" />

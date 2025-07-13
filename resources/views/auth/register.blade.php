@@ -24,7 +24,6 @@
                 <div class="p-5 w-100">
                     <h3 class="mb-5 fw-bold text-center">Register</h3>
 
-
                     <form method="POST" action="{{ route('register') }}" id="registerForm">
                         @csrf
 
@@ -38,6 +37,7 @@
                                 @error('name')
                                 <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
                                 @enderror
+                                <div class="invalid-feedback" id="name-error" style="display: none;"></div>
                             </div>
                             <div class="col-md-6">
                                 <label for="email" class="form-label">Email</label>
@@ -48,6 +48,7 @@
                                 @error('email')
                                 <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
                                 @enderror
+                                <div class="invalid-feedback" id="email-error" style="display: none;"></div>
                             </div>
                         </div>
 
@@ -61,6 +62,7 @@
                             @error('username')
                             <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
                             @enderror
+                            <div class="invalid-feedback" id="username-error" style="display: none;"></div>
                         </div>
 
                         <!-- Row: Password dan Konfirmasi Password -->
@@ -74,11 +76,13 @@
                                 @error('password')
                                 <span class="invalid-feedback" role="alert"><strong>{{ $message }}</strong></span>
                                 @enderror
+                                <div class="invalid-feedback" id="password-error" style="display: none;"></div>
                             </div>
                             <div class="col-md-6">
                                 <label for="password-confirm" class="form-label">Konfirmasi Password</label>
                                 <input id="password-confirm" type="password" class="form-control"
                                     name="password_confirmation" placeholder="Ulangi password" required>
+                                <div class="invalid-feedback" id="password_confirmation-error" style="display: none;"></div>
                             </div>
                         </div>
 
@@ -134,18 +138,128 @@
         </div>
       </div>
     </div>
-  </div>
+</div>
 
+<!-- Modal Success -->
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header border-0 text-center">
+                <div class="w-100">
+                    <div class="mb-3">
+                        <i class="fas fa-check-circle text-success" style="font-size: 3rem;"></i>
+                    </div>
+                    <h5 class="modal-title fw-bold text-success" id="successModalLabel">Registrasi Berhasil!</h5>
+                </div>
+            </div>
+            <div class="modal-body text-center">
+                <p>Akun Anda berhasil dibuat. Silakan login untuk melanjutkan.</p>
+            </div>
+            <div class="modal-footer border-0 justify-content-center">
+                <button type="button" class="btn btn-success" id="goToLogin">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- Script -->
 <script>
+    // Function untuk clear semua error
+    function clearAllErrors() {
+        const errorElements = document.querySelectorAll('.invalid-feedback[id$="-error"]');
+        errorElements.forEach(element => {
+            element.style.display = 'none';
+            element.textContent = '';
+        });
+
+        const inputs = document.querySelectorAll('.form-control');
+        inputs.forEach(input => {
+            input.classList.remove('is-invalid');
+        });
+    }
+
+    // Function untuk menampilkan error
+    function showFieldError(fieldName, message) {
+        const field = document.getElementById(fieldName);
+        const errorElement = document.getElementById(fieldName + '-error');
+
+        if (field && errorElement) {
+            field.classList.add('is-invalid');
+            errorElement.textContent = message;
+            errorElement.style.display = 'block';
+        }
+    }
+
     document.getElementById('submitRegister').addEventListener('click', function () {
         const checkbox = document.getElementById('agreementCheckbox');
         if (checkbox.checked) {
-            document.getElementById('registerForm').submit();
+            // Clear previous errors
+            clearAllErrors();
+
+            // Tutup modal persetujuan
+            const agreementModal = bootstrap.Modal.getInstance(document.getElementById('agreementModal'));
+            agreementModal.hide();
+
+            // Submit form via AJAX untuk handling response
+            const form = document.getElementById('registerForm');
+            const formData = new FormData(form);
+
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest',
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Tampilkan modal success
+                    const successModal = new bootstrap.Modal(document.getElementById('successModal'));
+                    successModal.show();
+                } else {
+                    // Jika ada error, tampilkan di field yang sesuai
+                    if (data.errors) {
+                        Object.keys(data.errors).forEach(fieldName => {
+                            const message = data.errors[fieldName][0]; // Ambil pesan error pertama
+                            showFieldError(fieldName, message);
+                        });
+
+                        // Scroll ke error pertama
+                        const firstError = document.querySelector('.is-invalid');
+                        if (firstError) {
+                            firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                            firstError.focus();
+                        }
+                    } else {
+                        alert('Terjadi kesalahan saat registrasi. Silakan coba lagi.');
+                    }
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Terjadi kesalahan saat registrasi. Silakan coba lagi.');
+            });
         } else {
             alert('Anda harus menyetujui persyaratan terlebih dahulu.');
         }
+    });
+
+    // Handler untuk tombol OK di modal success
+    document.getElementById('goToLogin').addEventListener('click', function() {
+        window.location.href = "{{ route('login') }}";
+    });
+
+    // Clear error saat user mulai mengetik
+    document.querySelectorAll('.form-control').forEach(input => {
+        input.addEventListener('input', function() {
+            const errorElement = document.getElementById(this.id + '-error');
+            if (errorElement && errorElement.style.display !== 'none') {
+                this.classList.remove('is-invalid');
+                errorElement.style.display = 'none';
+                errorElement.textContent = '';
+            }
+        });
     });
 </script>
 @endsection

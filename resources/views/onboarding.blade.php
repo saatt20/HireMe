@@ -486,6 +486,9 @@
                     <img src="{{ asset('images/finnet.png') }}" alt="Mitra 4" class="img-fluid" />
                 </div>
                 <div class="logo-item">
+                    <img src="{{ asset('images/logo-autokirim.png') }}" alt="Mitra 10" class="img-fluid" />
+                </div>
+                <div class="logo-item">
                     <img src="{{ asset('images/agroteknik.jpg') }}" alt="Mitra 5" class="img-fluid" />
                 </div>
                 <div class="logo-item">
@@ -515,6 +518,9 @@
                 </div>
                 <div class="logo-item">
                     <img src="{{ asset('images/finnet.png') }}" alt="Mitra 4" class="img-fluid" />
+                </div>
+                <div class="logo-item">
+                    <img src="{{ asset('images/logo-autokirim.png') }}" alt="Mitra 10" class="img-fluid" />
                 </div>
                 <div class="logo-item">
                     <img src="{{ asset('images/agroteknik.jpg') }}" alt="Mitra 5" class="img-fluid" />

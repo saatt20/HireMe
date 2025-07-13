@@ -115,14 +115,16 @@ background-color: #C71527; /* Sesuaikan warna merah sesuai desain kamu */
             <div class="col-md-4">
                 <div class="card mb-3">
                     <div class="card-header">
-                        <h5>Gaji</h5>
+                        <h5>Gaji THP <span class="text-muted">(Opsional)</span></h5>
                     </div>
                     <div class="card-body">
                         <label for="gaji_min" class="form-label">Gaji Minimal (Juta)</label>
-                        <input type="text" name="gaji_min" class="form-control" min="0" required placeholder="Contoh: 2,5 Juta" value="{{ old('gaji_min', $lowongan->gaji_min) }}">
+                        <input type="text" name="gaji_min" class="form-control" min="0" placeholder="Contoh: 2,5" value="{{ old('gaji_min', $lowongan->gaji_min) }}">
 
                         <label for="gaji_max" class="form-label mt-3">Gaji Maksimal (Juta)</label>
-                        <input type="text" name="gaji_max" class="form-control" min="0" required placeholder="Contoh: 4,5 Juta" value="{{ old('gaji_max', $lowongan->gaji_max) }}">
+                        <input type="text" name="gaji_max" class="form-control" min="0" placeholder="Contoh: 4,5" value="{{ old('gaji_max', $lowongan->gaji_max) }}">
+
+                        <small class="text-muted">Kosongkan jika tidak ingin menampilkan informasi gaji</small>
                     </div>
                 </div>
             </div>
