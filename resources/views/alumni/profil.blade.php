@@ -99,9 +99,13 @@
                     <label class="form-label fw-bold">Tempat Tinggal</label>
                     <p>{{ $alumni->kota ?? '-' }}, {{ $alumni->provinsi ?? '-' }}</p>
                 </div>
-                <div class="col-md-6">
+                {{-- <div class="col-md-6">
                     <label class="form-label fw-bold">Jenis Kelamin</label>
                     <p>{{ $alumni->jenis_kelamin ?? '-' }}</p>
+                </div> --}}
+                <div class="col-md-6">
+                    <label class="form-label fw-bold">NIM</label>
+                    <p>{{ $alumni->nim ?? '-' }}</p>
                 </div>
             </div>
         </div>
@@ -144,7 +148,6 @@
                         <option value="Bisnis Digital" {{ old('program_studi', $alumni->program_studi) == 'Bisnis Digital' ? 'selected' : '' }}>Bisnis Digital</option>
                         <option value="Sistem Informasi" {{ old('program_studi', $alumni->program_studi) == 'Sistem Informasi' ? 'selected' : '' }}>Sistem Informasi</option>
                     </select>
-                    {{-- <input type="text" class="form-control" name="program_studi" value="{{ old('program_studi', $alumni->program_studi) }}"> --}}
                 </div>
                 <div class="col-md-6">
                     <label class="form-label fw-bold">Angkatan</label>
@@ -158,18 +161,22 @@
                     <label class="form-label fw-bold">Provinsi</label>
                     <input type="text" class="form-control" name="provinsi" value="{{ old('provinsi', $alumni->provinsi) }}">
                 </div>
-                <div class="col-md-6">
+                {{-- <div class="col-md-6">
                     <label class="form-label fw-bold">Jenis Kelamin</label>
                     <select name="jenis_kelamin" class="form-select">
                         <option value="">Pilih</option>
                         <option value="Laki-laki" {{ old('jenis_kelamin', $alumni->jenis_kelamin) == 'Laki-laki' ? 'selected' : '' }}>Laki-laki</option>
                         <option value="Perempuan" {{ old('jenis_kelamin', $alumni->jenis_kelamin) == 'Perempuan' ? 'selected' : '' }}>Perempuan</option>
                     </select>
+                </div> --}}
+                <div class="col-md-6">
+                    <label class="form-label fw-bold">NIM</label>
+                    <input type="number" class="form-control" name="nim" value="{{ old('nim', $alumni->nim) }}">
                 </div>
 
                 <div class="col-md-6">
                     <label class="form-label fw-bold">Foto Profil</label>
-                    <input type="file" class="form-control" name="foto">
+                    <input type="file" class="form-control" name="foto" id="fotoInput">
                 </div>
                 <div class="col-md-6">
                     <button type="submit" class="btn btn-primary mt-3">Simpan Perubahan</button>
@@ -199,26 +206,26 @@
     const statusKerjaForm = document.getElementById('statusKerjaForm');
 
     statusKerjaSwitch.addEventListener('change', function() {
-    let statusValue;
+        let statusValue;
 
-    if (this.checked) {
-        statusValue = 'Mencari Kerja';
-        statusLabelText.textContent = 'Mencari Kerja';
-        statusLabelText.classList.add('text-danger');
-        statusLabelText.classList.remove('text-secondary');
-    } else {
-        statusValue = 'Sudah Bekerja';
-        statusLabelText.textContent = 'Sudah Bekerja';
-        statusLabelText.classList.remove('text-danger');
-        statusLabelText.classList.add('text-secondary');
-    }
+        if (this.checked) {
+            statusValue = 'Mencari Kerja';
+            statusLabelText.textContent = 'Mencari Kerja';
+            statusLabelText.classList.add('text-danger');
+            statusLabelText.classList.remove('text-secondary');
+        } else {
+            statusValue = 'Sudah Bekerja';
+            statusLabelText.textContent = 'Sudah Bekerja';
+            statusLabelText.classList.remove('text-danger');
+            statusLabelText.classList.add('text-secondary');
+        }
 
-    // Update nilai input hidden
-    statusKerjaInput.value = statusValue;
+        // Update nilai input hidden
+        statusKerjaInput.value = statusValue;
 
-    // Submit form untuk menyimpan ke database secara otomatis
-    statusKerjaForm.submit();
-});
+        // Submit form untuk menyimpan ke database secara otomatis
+        statusKerjaForm.submit();
+    });
 
     // Preview gambar saat memilih file
     const fotoInput = document.getElementById('fotoInput');
@@ -233,5 +240,14 @@
             reader.readAsDataURL(this.files[0]);
         }
     });
+
+    // Validasi NIM hanya angka
+    const nimInput = document.querySelector('input[name="nim"]');
+    if (nimInput) {
+        nimInput.addEventListener('input', function(e) {
+            // Hapus karakter non-numeric
+            this.value = this.value.replace(/[^0-9]/g, '');
+        });
+    }
 </script>
 @endpush

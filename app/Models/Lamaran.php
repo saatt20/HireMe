@@ -10,7 +10,7 @@ class Lamaran extends Model
     use HasFactory;
 
    protected $fillable = [
-    'lowongan_id', 'user_id', 'cv_pdf', 'telepon', 'email', 'linkedin', 'status','pesan_notifikasi'
+    'lowongan_id', 'user_id', 'cv_pdf', 'portofolio', 'telepon', 'email', 'linkedin', 'status','pesan_notifikasi'
     ];
 
 

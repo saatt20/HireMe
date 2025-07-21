@@ -10,7 +10,7 @@ class Alumni extends Model
     use HasFactory;
 
     protected $fillable = [
-    'user_id', 'telepon', 'kota', 'provinsi', 'jenis_kelamin', 'linkedin',
+    'user_id', 'telepon', 'kota', 'provinsi', 'jenis_kelamin', 'nim', 'linkedin',
     'status_kerja', 'program_studi', 'angkatan'];
 
     public function user()

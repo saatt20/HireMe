@@ -22,6 +22,7 @@ class ProfileAlumniController extends Controller
             'kota' => '',
             'provinsi' => '',
             'jenis_kelamin' => '',
+            'nim' => '',
             'linkedin' => '',
             'foto' => null,
             'status_kerja' => 'Sudah Bekerja', // default: Sudah Bekerja
@@ -43,6 +44,7 @@ class ProfileAlumniController extends Controller
             'kota' => 'nullable|string|max:100',
             'provinsi' => 'nullable|string|max:100',
             'jenis_kelamin' => 'nullable|in:Laki-laki,Perempuan',
+            'nim' => 'nullable|numeric|digits_between:8,20',
             'linkedin' => 'nullable|url|max:255',
             'foto' => 'nullable|image|max:2048', // max 2MB
 
@@ -81,6 +83,7 @@ class ProfileAlumniController extends Controller
         $alumni->kota = $request->kota;
         $alumni->provinsi = $request->provinsi;
         $alumni->jenis_kelamin = $request->jenis_kelamin;
+        $alumni->nim = $request->nim;
         $alumni->linkedin = $request->linkedin;
         $alumni->save();
 

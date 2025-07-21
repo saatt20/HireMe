@@ -21,7 +21,7 @@
         /* padding: 0 !important; */
     }
 
-    /* Pastikan watermark tetap terlihat saat cetak */
+    /*  watermark tetap terlihat saat cetak */
     .watermark-footer {
         display: block !important;
         position: fixed;

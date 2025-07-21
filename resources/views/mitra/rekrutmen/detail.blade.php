@@ -30,6 +30,7 @@
                             <th>Telepon</th>
                             <th>Email</th>
                             <th>CV</th>
+                            <th>Portofolio</th>
                             <th>Status</th>
                             <th>Aksi</th>
                         </tr>
@@ -45,6 +46,15 @@
                                     @if($lamaran->cv_pdf)
                                         <a href="{{ asset('storage/' . $lamaran->cv_pdf) }}" target="_blank" class="btn btn-sm btn-primary">
                                             <i class="fas fa-file-pdf"></i> Lihat CV
+                                        </a>
+                                    @else
+                                        <span class="text-muted">Tidak ada</span>
+                                    @endif
+                                </td>
+                                <td>
+                                    @if($lamaran->portofolio)
+                                        <a href="{{ asset('storage/' . $lamaran->portofolio) }}" target="_blank" class="btn btn-sm btn-secondary">
+                                            <i class="fas fa-file-alt"></i> Lihat Portofolio
                                         </a>
                                     @else
                                         <span class="text-muted">Tidak ada</span>

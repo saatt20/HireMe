@@ -15,6 +15,11 @@ class LamaranController extends Controller
 {
     public function kirim(Request $request, Lowongan $lowongan)
     {
+        // Validasi portofolio jika ada
+        $request->validate([
+            'portofolio' => 'nullable|file|mimes:pdf,doc,docx,zip,rar|max:10240', // Max 10MB
+        ]);
+
         $user = auth()->user();
         $alumni = $user->alumni;
         $cv = $user->cv;
@@ -25,10 +30,20 @@ class LamaranController extends Controller
 
         Storage::put('public/cv/' . $filename, $pdf);
 
+        // Handle portofolio upload
+        $portofolioPath = null;
+        if ($request->hasFile('portofolio')) {
+            $portofolioFile = $request->file('portofolio');
+            $portofolioFilename = 'portofolio-' . $user->id . '-' . time() . '.' . $portofolioFile->getClientOriginalExtension();
+            $portofolioPath = $portofolioFile->storeAs('public/portofolio', $portofolioFilename);
+            $portofolioPath = str_replace('public/', '', $portofolioPath);
+        }
+
         Lamaran::create([
             'lowongan_id' => $lowongan->id,
             'user_id' => $user->id,
             'cv_pdf' => 'cv/' . $filename,
+            'portofolio' => $portofolioPath,
             'telepon' => $alumni->telepon,
             'email' => $user->email,
             'linkedin' => $alumni->linkedin,
